@@ -1,1 +1,1 @@
-JamOS X 2022
+JamOS OpenWise 2022
