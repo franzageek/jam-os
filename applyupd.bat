@@ -1,0 +1,23 @@
+@echo off
+title Updating software...
+mode 35,4
+color 9f
+echo Updating...
+cd..\..
+set mypath=%cd%
+cls
+echo Updating...
+move %mypath%\system\updatefiles\system.jamx %mypath%\system\sys.jamupd
+cls
+echo Updating...
+del %mypath%\system\system.jamx
+cls
+echo Updating...
+rename %mypath%\system\sys.jamupd %mypath%\system\system.jamx
+cls
+echo Updating...
+rename %mypath%\boot\reset.jamx %mypath%\boot\reset.bat
+cls
+echo Updating...
+start %mypath%\boot\reset.bat
+exit
