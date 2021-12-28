@@ -10,7 +10,8 @@ move %cd%\system\updatefiles\system.jamx %cd%\system\sys.jamupd
 cls
 cd system
 echo Updating...
-del system.jamx
+if exist system.bat if not exist system.jamx del system.bat
+if not exist system.bat if exist system.jamx del system.jamx
 cls
 echo Updating.
 rename sys.jamupd system.jamx
