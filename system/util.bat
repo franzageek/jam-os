@@ -9,7 +9,4 @@ cd ..
 cd core
 rename snake.bat snake.jamapp
 rename system.bat system.jamapp
-cd ..
-cd system
-rename system.bat system.jamx
 exit
