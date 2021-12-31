@@ -361,7 +361,7 @@ move "%cd%\system\updatefiles\shutdown.jamx" "%cd%\boot\shutdown.jamx"
 move "%cd%\system\updatefiles\boot.jamx" "%cd%\boot\boot.jamx"
 move "%cd%\system\updatefiles\reset.jamx" "%cd%\boot\reset.jamx"
 cls 
-echo Done! Press ENTER to reboot JamOS.
+echo Done^^! Press ENTER to reboot JamOS.
 pause >nul
 cls
 cd system\updatefiles
