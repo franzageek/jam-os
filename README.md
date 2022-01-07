@@ -1,17 +1,17 @@
 # JamOS
 [![](https://img.shields.io/badge/Go_to-releases-brightgreen?style=plastic&logo=github)](https://github.com/franzageek/jam-os/releases) [![](https://img.shields.io/badge/Fork-blue?style=plastic&logo=github)](https://github.com/franzageek/jam-os/fork) [![](https://img.shields.io/badge/Report_an_issue-red?style=plastic&logo=github)](https://github.com/franzageek/jam-os/issues)
 
-> [Description](https://github.com/franzageek/jam-os/blob/master/README.md#Description)
+> [Description](https://github.com/franzageek/jam-os#Description)
 > 
-> [Installation](https://github.com/franzageek/jam-os/blob/master/README.md#Installation)
+> [Installation](https://github.com/franzageek/jam-os#Installation)
 > 
-> [Usage](https://github.com/franzageek/jam-os/blob/master/README.md#Usage)
+> [Usage](https://github.com/franzageek/jam-os#Usage)
 >
-> [Fixing errors](https://github.com/franzageek/jam-os/blob/master/README.md#Fixing-errors)
+> [Fixing errors](https://github.com/franzageek/jam-os#Fixing-errors)
 >
-> [Warnings](https://github.com/franzageek/jam-os/blob/master/README.md#Warnings)
+> [Warnings](https://github.com/franzageek/jam-os#Warnings)
 >
-> [Credits](https://github.com/franzageek/jam-os#credits)
+> [Credits](https://github.com/franzageek/jam-os#Credits)
 
 
 ![](https://github.com/franzageek/jam-os/blob/resources/jamos.png)
