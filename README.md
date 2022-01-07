@@ -37,4 +37,7 @@ If you are sure you have all the files in order, but the blue screen still appea
 
 #### If there is something that does not convince you, please start a discussion
 
+## Credits
+GNU WGET is a GNU Project. Discover it at [![](https://img.shields.io/badge/https://www.gnu.org/software/wget/-blue)](https://www.gnu.org/software/wget/)
+
 
