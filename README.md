@@ -1,4 +1,5 @@
 # JamOS
+[![](https://img.shields.io/badge/Go_to-releases-brightgreen?style=plastic&logo=github)](https://github.com/franzageek/jam-os/releases) [![](https://img.shields.io/badge/Fork-blue?style=plastic&logo=github)](https://github.com/franzageek/jam-os/fork) [![](https://img.shields.io/badge/Report_an_issue-red?style=plastic&logo=github)](https://github.com/franzageek/jam-os/issues)
 
 > [Description](https://github.com/franzageek/jam-os/blob/master/README.md#Description)
 > 
@@ -39,5 +40,7 @@ If you are sure you have all the files in order, but the blue screen still appea
 
 ## Credits
 GNU WGET is a GNU Project. Discover it at [![](https://img.shields.io/badge/https://www.gnu.org/software/wget/-blue)](https://www.gnu.org/software/wget/)
+
+Download.exe is developed by Faith Kodak - [![](https://img.shields.io/badge/https://www.f2ko.de/-blue)](https://www.f2ko.de/)
 
 
