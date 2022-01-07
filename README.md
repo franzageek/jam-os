@@ -16,7 +16,7 @@
 JamOS is an operating system coded in **Batch**. Whole system is based on few files that interact with each others. This simulator **doesn't affect** your computer data more than it should, so **don't worry about** *losing data, infecting your computer*, etc.
 
 ## Installation
-JamOS' installation is very **quickly & simple**. After downloading **the `jam-os.zip` folder**, you just have to extract it and **start `JamOS Installer.bat`** . 
+JamOS' installation is very **quickly & simple**. After downloading **the `jamosX.XX.X.zip` folder**, you just have to extract it and **start `JamOS Installer.bat`** . 
 The installation will begin. You just need to follow the steps on screen.
 
 ## Usage
