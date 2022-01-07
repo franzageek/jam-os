@@ -10,6 +10,9 @@
 > [Fixing errors](https://github.com/franzageek/jam-os/blob/master/README.md#Fixing-errors)
 >
 > [Warnings](https://github.com/franzageek/jam-os/blob/master/README.md#Warnings)
+>
+> [Credits](https://github.com/franzageek/jam-os#credits)
+
 
 ![](https://github.com/franzageek/jam-os/blob/resources/jamos.png)
 
