@@ -317,6 +317,7 @@ mkdir updatefiles
 copy download.exe "%cd%\updatefiles\download.exe"
 cd updatefiles
 download https://raw.githubusercontent.com/franzageek/jam-os/latest/system/system.jamins system.jamx
+download https://raw.githubusercontent.com/franzageek/jam-os/latest/system/wget.exe wget.exe
 cls
 echo Updating software, please wait..
 echo.
@@ -327,6 +328,7 @@ echo Updating software, please wait...
 echo.
 echo Downloading latest files...
 download https://raw.githubusercontent.com/franzageek/jam-os/latest/boot/shutdown.jamins shutdown.jamx
+
 cls
 echo Updating software, please wait.
 echo.
@@ -360,6 +362,7 @@ echo Installing new files ...
 move "%cd%\system\updatefiles\shutdown.jamx" "%cd%\boot\shutdown.jamx"
 move "%cd%\system\updatefiles\boot.jamx" "%cd%\boot\boot.jamx"
 move "%cd%\system\updatefiles\reset.jamx" "%cd%\boot\reset.jamx"
+move "%cd%\system\updatefiles\wget.exe" "%cd%\system\wget.exe"
 cls 
 echo Done^^! Press ENTER to reboot JamOS.
 pause >nul
