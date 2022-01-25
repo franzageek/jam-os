@@ -31,7 +31,7 @@ set /p cmdline=^>
 
 if /i %cmdline%==create goto :new
 if /i %cmdline%==read goto :read
-if /i %cmdline%==exit exit /b
+if /i %cmdline%==exit exit
 if /i %cmdline%==help goto :help
 goto :cmdline
 
