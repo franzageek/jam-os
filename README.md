@@ -39,7 +39,7 @@ If you are sure you have all the files in order, but the blue screen still appea
 
 #### When you are using non-release builds (e.g. modified by yourself or by someone, builds that are not downloaded from this repo), bugs & other problems may occur. Use _only_ official builds released by us in this repo.
 
-#### If there is something that does not convince you, please start a discussion
+#### If there is something that does not convince you, please start a discussion.
 
 ## Credits
 GNU WGET is a GNU Project. Discover it at [![](https://img.shields.io/badge/https://www.gnu.org/software/wget/-blue)](https://www.gnu.org/software/wget/)
