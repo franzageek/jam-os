@@ -1,0 +1,628 @@
+@echo off
+:beginning
+@echo off
+
+title JamOS
+SET mypath=%~dp0
+
+
+mode con: cols=100 lines=30
+cls
+cd..
+cd data
+set /p ver=<version.jamdat
+set /p kernel=<kernel.jamdat
+cd..
+cd boot
+
+SET Node=%ComputerName%
+
+ECHO.%Node%| FINDSTR.EXE /R /C:"[/?*,;:/\\&<>+ ]" >NUL
+PING %Node% -n 2 2>NUL | FIND "TTL=" >NUL
+
+FOR /F "usebackq tokens=3" %%s IN (`DIR C:\ /-C /-O /W`) DO (
+    SET FREE_SPACE=%%s
+)
+
+
+SETLOCAL EnableDelayedExpansion
+for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do     rem"') do (
+  set "DEL=%%a"
+)
+
+:# IF "%1" == "" (
+:#   >NUL REG ADD HKCU\Console\GameEngine /v FaceName /t reg_sz /d "Consolas" /f
+:#   START "GameEngine" "%~0" 1
+:#   EXIT
+:# ) else ( >NUL REG DELETE HKCU\Console\GameEngine /f )
+echo.
+title FluxBIOS
+color 0f
+call :colorEcho 0c "        ########## +++"
+echo.
+call :colorEcho 0c "       ###        +++"
+echo.
+call :colorEcho 0c "      ###        +++"
+call :colorEcho 0f "              Flux Bios"
+echo.
+call :colorEcho 0c "     ########   +++++++++++"
+call :colorEcho 0f "       Version "
+call :colorEcho 0e "   1.0.0"
+echo.
+call :colorEcho 0c "    ###        +++     +++"
+echo.
+call :colorEcho 0c "   ###        +++     +++"
+echo.
+call :colorEcho 0c "  ###        +++++++++++"      
+echo. 
+echo.
+echo.
+echo.
+echo    BIOS version     : 1.0.0
+echo    System version   : %ver%
+echo    System kernel    : %kernel%
+echo.
+echo    Computer name    : %computername%
+echo.
+echo    CPU architecture : %processor_architecture%
+echo    CPU identifier   : %processor_identifier%
+echo    CPU revision     : %processor_revision%
+echo    CPU level        : %PROCESSOR_LEVEL%
+echo    Number of cores  : %NUMBER_OF_PROCESSORS%
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+choice /c eb /t 5 /M "Press E to enter Setup..." /d b /n
+if %errorlevel%==1 goto :setup
+if %errorlevel%==2 goto :booting
+
+
+:booting
+mode con: cols=120 lines=30
+cd..\
+cd system
+ren system.bat system.jamx
+cd..\
+cd boot
+ren reset.bat reset.jamx
+ren shutdown.bat shutdown.jamx
+cd..\
+cd core
+ren system.bat system.jamapp
+ren snake.bat snake.jamapp
+ren notepad.bat notepad.jamapp
+cls
+
+for /f %%x in ('wmic path win32_localtime get /format:list ^| findstr "="') do set %%x
+set today=%year%.%month%.%day%
+
+cd..\
+cd boot
+cls
+title JamOS: Booting up system...
+COLOR
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+for %%d in ( A B C ª D E F G H CH I J K L M N O P Q R S T U V W X Y Z A B C ª D E F G H CH I A A A A A A A A A A A A A A A A A) do echo|set /p=+
+for %%d in ( A ) do echo.|set /p=J
+for %%d in ( A ) do echo.|set /p=a
+for %%d in ( A ) do echo.|set /p=m
+for %%d in ( A ) do echo.|set /p=O
+for %%d in ( A ) do echo.|set /p=S
+for %%d in ( A ) do echo.|set /p=+
+for %%d in ( A B C ª D E F G H CH I J K L M N O P Q R S T U V W X Y Z A B C ª D E F G H CH I A A A A A A A A A A A A A A A A A) do echo|set /p=+
+echo.
+ping -n 2 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                     *****
+echo                                                                 *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.                                                   
+echo                                                        *****
+echo                                                              *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                           *****
+echo                                                           *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                              *****
+echo                                                        *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                                 *****
+echo                                                     *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                              *****
+echo                                                        *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.                                                   
+echo                                                           *****
+echo                                                           *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                        *****
+echo                                                              *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                     *****
+echo                                                                 *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.                                                   
+echo                                                        *****
+echo                                                              *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                           *****
+echo                                                           *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                              *****
+echo                                                        *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                                 *****
+echo                                                     *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                              *****
+echo                                                        *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.                                                   
+echo                                                           *****
+echo                                                           *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                        *****
+echo                                                              *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                     *****
+echo                                                                 *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.                                                   
+echo                                                        *****
+echo                                                              *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                           *****
+echo                                                           *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                              *****
+echo                                                        *****
+ping -n 1 localhost >nul
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo                                                     Starting up JamOS
+echo.
+echo                                                                 *****
+echo                                                     *****
+cls
+cd..\
+if not exist %cd%\log mkdir log
+cd log
+echo ##STARTUP## %date% @ %time% >>log%year%.%month%.%day%.log
+echo. >>log.%date%.log
+cd..
+cd system
+rmdir updatefiles /Q /S
+if exist system.bat if not exist system.jamx start system.bat
+if not exist system.bat if exist system.jamx rename system.jamx system.bat &start system.bat
+timeout /t 1 /nobreak > NUL
+exit
+
+
+
+:setup
+cls
+mode 120,30
+color f0
+call :colorEcho bf "                                                [ Flux BIOS Setup ]                                                    ]"
+echo.
+echo.
+echo         BIOS Information   
+echo         BIOS Name                 Flux BIOS
+echo         Bootloader Path           %cd%
+echo.
+echo         Free disk space           %free_space% bytes
+echo         RAM Size                  %RAM%
+echo.       
+echo         Date                      %date%
+echo         Time                      %time%
+echo.
+echo         Access level              Administrator
+echo.
+echo.
+choice /c he /N /M "---- # Press H to get hardware information or E to exit Setup:"
+if %errorlevel%==1 goto :hwinfo
+if %errorlevel%==2 goto :beginning
+
+:hwinfo
+cls
+color f0
+call :colorEcho bf "                                                [ Flux BIOS Setup ]                                                    ]"
+echo.
+echo.
+echo  HARDWARE
+ECHO.
+echo    [1] Disk drives
+echo    [2] Graphic card
+echo    [3] Motherboard
+echo    [4] Keyboard
+echo    [5] IDE
+echo    [6] CD-ROM (if exists)
+echo.       
+echo    [0] Back to home screen 
+echo    [E] Exit Setup
+echo.
+echo.
+echo.
+echo.
+choice /c 0123456E /N /M "Choice:"
+if %errorlevel%==1 goto :setup
+if %errorlevel%==2 goto :dd1
+if %errorlevel%==3 goto :gc1
+if %errorlevel%==4 goto :mb1
+if %errorlevel%==5 goto :kb1
+if %errorlevel%==6 goto :ide1
+if %errorlevel%==7 goto :cd1
+if %errorlevel%==8 goto :beginning
+
+:dd1
+cls
+color f0
+call :colorEcho bf "                                                [ Flux BIOS Setup ]                                                    ]"
+echo.
+echo.
+echo ^< Back                Disk drives
+ECHO.
+wmic diskdrive get size, mediaType, interfaceType, caption, status
+echo.
+echo.
+echo.
+echo.
+call :colorEcho f0 "Press Enter to go back"
+pause > NUL
+echo.
+goto :hwinfo
+
+:gc1
+cls
+color f0
+call :colorEcho bf "                                                [ Flux BIOS Setup ]                                                    ]"
+echo.
+echo.
+echo ^< Back                Graphic card
+ECHO.
+wmic path win32_videocontroller get name, deviceid, status
+echo.
+echo.
+echo.
+echo.
+call :colorEcho f0 "Press Enter to go back"
+pause > NUL
+echo.
+goto :hwinfo
+
+:mb1
+cls
+color f0
+call :colorEcho bf "                                                [ Flux BIOS Setup ]                                                    ]"
+echo.
+echo.
+echo ^< Back                Motherboard
+ECHO.
+wmic baseboard get caption, name, manufacturer, poweredon, replaceable, installdate, status
+echo.
+echo.
+echo.
+echo.
+call :colorEcho f0 "Press Enter to go back"
+pause > NUL
+echo.
+goto :hwinfo
+
+:kb1
+cls
+color f0
+call :colorEcho bf "                                                [ Flux BIOS Setup ]                                                    ]"
+echo.
+echo.
+echo ^< Back                Keyboard
+ECHO.
+wmic Path Win32_Keyboard Get caption, layout, deviceid, description, status
+echo.
+echo.
+echo.
+echo.
+call :colorEcho f0 "Press Enter to go back"
+pause > NUL
+echo.
+goto :hwinfo
+
+:ide1
+cls
+color f0
+call :colorEcho bf "                                                [ Flux BIOS Setup ]                                                    ]"
+echo.
+echo.
+echo ^< Back                IDE Controller
+ECHO.
+WMIC idecontroller get name, deviceid, status
+echo.
+echo.
+echo.
+echo.
+call :colorEcho f0 "Press Enter to go back"
+pause > NUL
+echo.
+goto :hwinfo
+
+:cd1
+cls
+color f0
+call :colorEcho bf "                                                [ Flux BIOS Setup ]                                                    ]"
+echo.
+echo.
+echo ^< Back                CD-ROM (if exists)
+ECHO.
+wmic cdrom get name, deviceid, transferrate, status
+echo.
+echo.
+echo.
+echo.
+call :colorEcho f0 "Press Enter to go back"
+pause > NUL
+echo.
+goto :hwinfo
+
+:colorEcho
+echo off
+<nul set /p ".=%DEL%" > "%~2"
+findstr /v /a:%1 /R "^$" "%~2" nul
+del "%~2" > nul 2>&1i
