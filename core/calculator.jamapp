@@ -1,0 +1,35 @@
+@echo off
+chcp 65001
+title JamAPP: Calculator
+:beginning
+cls
+echo.
+echo Welcome to JamAPP Calculator!
+echo.
+echo Type "EXIT" to exit, type "HELP" or "?" to get help.
+echo.
+:input
+echo.
+set /P numb=Enter math expression:
+if /i %numb%==exit exit
+if /i %numb%==help goto help
+set /a equal=%numb%
+echo The result is: %equal%
+goto :input
+
+:help
+echo.
+echo JamAPP Calculator 1.0.0
+echo.
+echo List of avaiable expressions:
+echo.
+echo     + Addition          * Multiplication
+echo.
+echo.
+echo     - Subtraction       / Division
+echo.
+echo Example:
+echo.
+echo    Enter math expression:5*3
+echo    The result is: 15
+goto :input
