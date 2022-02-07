@@ -24,7 +24,7 @@ JamOS' installation is very **quickly & simple**. After downloading **the `jamos
 The installation will begin. You just need to follow the steps on screen.
 
 ## Usage
-JamOS is very simple to use. You can start it by **the `JamOS.bat` file**. After booting up the system, you can use the **JamOS Command Line** wich lets you to perform some actions.
+JamOS is very simple to use. You can start it by **the `JamOS.bat` file**. After booting up the system, you can use the **JamOS Command Line** which lets you to perform some actions.
 
 ## Fixing errors
 If there is any error during the installation process, the **blue screen** will appear, showing information about errors etc.
