@@ -46,4 +46,9 @@ GNU WGET is a GNU Project. Discover it at [![](https://img.shields.io/badge/http
 
 Download.exe is developed by Faith Kodak - [![](https://img.shields.io/badge/https://www.f2ko.de/-blue)](https://www.f2ko.de/)
 
+NirCMD is developed by NirSoft - [![](https://img.shields.io/badge/https://www.nirsoft.net/utils/nircmd.html/-blue)](https://www.nirsoft.net/utils/nircmd.html/)
+
+
+
+
 
